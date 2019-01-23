@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form>
+        <h1>Chuyển đổi giá trị feet và meters</h1><br>
+        <label>
+            Nhập vào số meters:
+            <input id ='so_meters' type="number" oninput ='change(so_meters)' value="">
+        </label>
+        </label><br>
+        <p id = ket_qua>Kết quả =</p>
+        <label >
+            Nhập vào số feet:
+            <input id ='so_feet' type="number"oninput ='change2(so_feet)' value=""></label>
+        </label>
+        <p id = ket_qua2>Kết quả =</p>
+    </form>
+
+    <script>
+
+        function change(so_meters)
+        {
+            let x=parseFloat(document.getElementById('so_meters').value);
+            let tra_ve=document.getElementById('ket_qua');
+            tra_ve.innerHTML='Kết quả ='+ parseFloat(x*0.305);
+        }
+        function change2(so_feet)
+        {
+            let x=parseFloat(document.getElementById('so_feet').value);
+            let tra_ve=document.getElementById('ket_qua2');
+            tra_ve.innerHTML='Kết quả ='+ parseFloat(x*3.279);
+        }
+    </script>
+</body>
+</html>
